@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Matches Played vs Matches Won</title>
+  </head>
+  <body>
+    <h1>Matches Played vs Matches Won - Year {{ year }}</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Team</th>
+          <th>Matches Played</th>
+          <th>Matches Won</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for match in matches_played %}
+        <tr>
+          <td>{{ match.team1 }}</td>
+          <td>{{ match.total_matches }}</td>
+          <td>
+            {% for win in matches_won %} {% if win.winner == match.team1 %} {{
+            win.total_wins }} {% endif %} {% endfor %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Top Economical Bowlers</title>
+  </head>
+  <body>
+    <h1>Top Economical Bowlers - Year {{ year }}</h1>
+    <ul>
+      {% for bowler in economical_bowlers %}
+      <li>{{ bowler.bowler }}: {{ bowler.economy_rate }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

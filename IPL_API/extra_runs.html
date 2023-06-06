@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Extra Runs Conceded per Team</title>
+  </head>
+  <body>
+    <h1>Extra Runs Conceded per Team - Year {{ year }}</h1>
+    <ul>
+      {% for result in extra_runs %}
+      <li>{{ result.bowling_team }}: {{ result.total_extra_runs }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
